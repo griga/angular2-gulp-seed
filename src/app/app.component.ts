@@ -12,50 +12,39 @@ import {
 
 import {APP_BASE_HREF} from "angular2/src/platform/browser/location/location_strategy";
 
-import { DashboardComponent } from './dashboard.component';
-import { HeroesComponent } from './heroes.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { HeroService } from './hero.service';
+import { AboutComponent } from './+about/index';
+import { HomeComponent } from './+home/index';
+import { NameListService, NavbarComponent, ToolbarComponent } from './shared/index';
+import {HTTP_PROVIDERS} from "angular2/http";
 
+/**
+ * This class represents the main application component. Within the @Routes annotation is the configuration of the
+ * applications routes, configuring the paths for the lazy loaded components (HomeComponent, AboutComponent).
+ */
 @Component({
-  selector: 'my-app',
-  template: `
-    <h1>{{title}}</h1>
-    <nav>
-      <a [routerLink]="['Dashboard']">Dashboard</a>
-      <a [routerLink]="['Heroes']">Heroes</a>
-    </nav>
-    <router-outlet></router-outlet>
-    <footer></footer>
-  `,
-  styleUrls: ['app/app.component.css'],
-  directives: [ROUTER_DIRECTIVES],
+  moduleId: 'app',
+  selector: 'sd-app',
+  viewProviders: [NameListService, HTTP_PROVIDERS],
+  templateUrl: 'app/app.component.html',
+  directives: [ROUTER_DIRECTIVES, NavbarComponent, ToolbarComponent],
   providers: [
     ROUTER_PROVIDERS,
     provide(APP_BASE_HREF, { useValue: '/' }),
     provide(LocationStrategy,
-        {useClass: HashLocationStrategy}),
-    HeroService
+        {useClass: HashLocationStrategy})
   ]
 })
 @RouteConfig([
   {
-    path: '/dashboard',
-    name: 'Dashboard',
-    component: DashboardComponent,
+    path: '/',
+    name: 'Home',
+    component: HomeComponent,
     useAsDefault: true
   },
   {
-    path: '/detail/:id',
-    name: 'HeroDetail',
-    component: HeroDetailComponent
-  },
-  {
-    path: '/heroes',
-    name: 'Heroes',
-    component: HeroesComponent
+    path: '/about',
+    name: 'About',
+    component: AboutComponent
   }
 ])
-export class AppComponent {
-  title = 'Tour of Heroes';
-}
+export class AppComponent {}

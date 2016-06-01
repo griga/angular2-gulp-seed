@@ -12,10 +12,11 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "gulp-concat": "^2.6.0",
     "gulp-connect": "^4.0.0",
-    "gulp-connect-multi": "^1.0.8",
     "gulp-inline-ng2-template": "^1.1.4",
     "gulp-open": "^2.0.0",
+    "gulp-sass": "^2.3.1",
     "gulp-sourcemaps": "^1.6.0",
     "typings": "^1.0.4"
   },
