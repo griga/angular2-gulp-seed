@@ -6,6 +6,6 @@ import { Component } from 'angular2/core';
 @Component({
     moduleId: 'app',
     selector: 'sa-header',
-    templateUrl: 'app/shared/header/header.component.html'
+    templateUrl: 'header.component.html'
 })
 export class HeaderComponent {}

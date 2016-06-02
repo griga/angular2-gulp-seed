@@ -9,7 +9,7 @@ import { NameListService } from '../shared/index';
 @Component({
   moduleId: 'app',
   selector: 'sd-home',
-  templateUrl: 'app/+home/home.component.html',
+  templateUrl: 'home.component.html',
   directives: [FORM_DIRECTIVES]
 })
 export class HomeComponent {

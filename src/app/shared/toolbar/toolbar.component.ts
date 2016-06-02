@@ -6,6 +6,6 @@ import { Component } from 'angular2/core';
 @Component({
   moduleId: 'app',
   selector: 'sd-toolbar',
-  templateUrl: 'app/shared/toolbar/toolbar.component.html',
+  templateUrl: 'toolbar.component.html',
 })
 export class ToolbarComponent {}

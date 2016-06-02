@@ -7,7 +7,7 @@ import { ROUTER_DIRECTIVES } from 'angular2/router';
 @Component({
   moduleId: 'app',
   selector: 'sd-navbar',
-  templateUrl: 'app/shared/navbar/navbar.component.html',
+  templateUrl: 'navbar.component.html',
   directives: [ROUTER_DIRECTIVES]
 })
 export class NavbarComponent {}

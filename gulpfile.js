@@ -94,6 +94,7 @@ gulp.task('ts', function () {
         .pipe(inlineNg2Template({ base: './src',
             target: 'es5',
             indent: 2,
+            useRelativePaths: true
         }))
         .pipe(sourcemaps.init())
         .pipe(typescript(tscConfig.compilerOptions))

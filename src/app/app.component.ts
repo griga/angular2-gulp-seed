@@ -25,7 +25,7 @@ import {HTTP_PROVIDERS} from "angular2/http";
   moduleId: 'app',
   selector: 'sd-app',
   viewProviders: [NameListService, HTTP_PROVIDERS],
-  templateUrl: 'app/app.component.html',
+  templateUrl: 'app.component.html',
   directives: [ROUTER_DIRECTIVES, NavbarComponent, ToolbarComponent],
   providers: [
     ROUTER_PROVIDERS,
